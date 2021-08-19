@@ -11,6 +11,10 @@ initialize(){
 }
 
 parseinputs(){
+    if [ $# -ne 2 ]; then
+        echo "Usage: $(basename $0) 'port' 'base_url'"
+        exit 1
+    fi
     port=$1
     base_url=$2
 }
