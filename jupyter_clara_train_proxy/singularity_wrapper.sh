@@ -73,7 +73,7 @@ main(){
     bindpath="$HOME,/nesi/project,/nesi/nobackup,${tmp_ports_conf}:/etc/apache2/ports.conf,${temp_aiaa_conf}:/etc/apache2/sites-available/aiaa.conf"
 
     aiaacmd="/opt/nvidia/medical/aiaa/AIAA start --engine AIAA -w $PWD"
-    smgcmd="singularity $([[ "$DEBUG" ]] && echo "shell" || echo "exec") --nv -B $bindpath $sif_path $aiaacmd"
+    smgcmd="singularity $([[ $LOGLEVEL = "DEBUG" ]] && echo "--debug shell" || echo "exec") --nv -B $bindpath $sif_path $aiaacmd"
 
     echo $smgcmd
     $smgcmd
