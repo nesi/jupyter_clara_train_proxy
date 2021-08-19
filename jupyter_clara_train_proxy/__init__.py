@@ -8,7 +8,7 @@ def setup_clara():
     
     sif_path = "/opt/nesi/containers/clara/clara-train-sdk_v4.0.sif"
     aiaa_path = "/opt/nvidia/medical/aiaa/AIAA"
-    icon_path = pkg_resources.resource_filename("jupyter_clara_train_proxy", "nvidia_logo.svg")
+    icon_path = pkg_resources.resource_filename("jupyter_clara_train_proxy", "nvidia_logo.png")
     wrapper_path = pkg_resources.resource_filename("jupyter_clara_train_proxy", "singularity_wrapper.sh")
 
     return {

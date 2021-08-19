@@ -2,7 +2,6 @@
 
 initialize(){
     export ROOT="$(dirname "$(cd "$(dirname "$\{BASH_SOURCE[0]\}")" >/dev/null 2>&1 && pwd -P)")"
-    #TMPROOT will be root mount point for all writable files in container.
 
     module purge
     module unload XALT/full
