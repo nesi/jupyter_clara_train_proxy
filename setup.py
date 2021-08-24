@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="jupter-clara-train-proxy",
+    name="jupyter-clara-train-proxy",
     version="0.2.0",
     packages=find_packages(),
     package_data={"jupyter_clara_train_proxy": ["nvidia_logo.png", "singularity_wrapper.sh"]},
