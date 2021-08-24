@@ -4,11 +4,7 @@ import pkg_resources
 from pathlib import Path
 
 def setup_clara():
-    home_path = Path(os.environ["HOME"])
-    
-    sif_path = "/opt/nesi/containers/clara/clara-train-sdk_v4.0.sif"
-    aiaa_path = "/opt/nvidia/medical/aiaa/AIAA"
-    icon_path = pkg_resources.resource_filename("jupyter_clara_train_proxy", "nvidia_logo.png")
+    icon_path = pkg_resources.resource_filename("jupyter_clara_train_proxy", "nvidia_logo.svg")
     wrapper_path = pkg_resources.resource_filename("jupyter_clara_train_proxy", "singularity_wrapper.sh")
 
     return {

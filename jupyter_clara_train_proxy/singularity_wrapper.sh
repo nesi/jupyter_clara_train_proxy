@@ -1,12 +1,10 @@
-#!/bin/bash -e
+#!/bin/bash
 
 initialize(){
-    export ROOT="$(dirname "$(cd "$(dirname "$\{BASH_SOURCE[0]\}")" >/dev/null 2>&1 && pwd -P)")"
-
     module purge
     module unload XALT/full
     module load Singularity
-    export TERM="xterm"
+    export TERM="xterm-256color"
 }
 
 parseinputs(){
@@ -66,6 +64,7 @@ EOF
 main(){
     initialize
     parseinputs "$@"
+    
     bindconfs
 
     sif_path="/opt/nesi/containers/clara/clara-train-sdk_v4.0.sif"
